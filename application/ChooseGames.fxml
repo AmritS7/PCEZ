@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720" prefWidth="1280" style="-fx-background-color: #fc3a3a;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ChooseGameController">
+   <children>
+      <ImageView fitHeight="1401.0" fitWidth="2543.0" focusTraversable="true" layoutX="-155.0" layoutY="-128.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Background.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <VBox layoutX="1050.0" layoutY="239.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="152.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GAME%20IMAGES/FORTNITE.PNG" />
+               </image>
+            </ImageView>
+            <CheckBox fx:id="cbFortnite" mnemonicParsing="false" onAction="#handleFortnite" text="Fortnite" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="25.0" />
+               </VBox.margin></CheckBox>
+         </children>
+      </VBox>
+      <Button fx:id="bSubmit" layoutX="785.0" layoutY="644.0" mnemonicParsing="false" onAction="#changeToListInfo" prefHeight="55.0" prefWidth="235.0" style="-fx-background-color: #187cab; -fx-border-color: #419fb0; -fx-border-width: 3;" text="Generate Builds" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="28.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.89" />
+         </effect></Button>
+      <ButtonBar layoutX="26.0" layoutY="31.0" prefHeight="51.0" prefWidth="149.0" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="31.0">
+         <buttons>
+            <Button fx:id="bBack" blendMode="DIFFERENCE" maxHeight="53.0" maxWidth="72.0" minHeight="53.0" minWidth="72.0" mnemonicParsing="false" onAction="#back" prefHeight="53.0" prefWidth="72.0">
+               <graphic>
+                  <ImageView blendMode="HARD_LIGHT" fitHeight="69.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Back.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ButtonBar layoutX="26.0" layoutY="31.0" prefHeight="51.0" prefWidth="149.0">
+               <buttons>
+                  <Button fx:id="bHome" blendMode="DIFFERENCE" maxHeight="53.0" maxWidth="72.0" minHeight="53.0" minWidth="72.0" mnemonicParsing="false" onAction="#home" prefHeight="53.0" prefWidth="72.0">
+                     <graphic>
+                        <ImageView blendMode="HARD_LIGHT" fitHeight="53.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </buttons>
+            </ButtonBar>
+         </buttons>
+      </ButtonBar>
+      <VBox layoutX="600.0" layoutY="14.0" prefHeight="200.0" prefWidth="161.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GAME%20IMAGES/MINECRAFT.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="7.0" left="5.0" />
+               </VBox.margin>
+            </ImageView>
+            <CheckBox fx:id="cbMinecraft" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleMinecraft" prefHeight="32.0" prefWidth="165.0" text="Minecraft" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets right="50.0" />
+               </padding></CheckBox>
+         </children>
+      </VBox>
+      <VBox layoutX="1050.0" layoutY="444.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GAME%20IMAGES/GTA.png" />
+               </image>
+            </ImageView>
+            <CheckBox fx:id="cbGTA" mnemonicParsing="false" onAction="#handleGTA" text="GTA" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="35.0" />
+               </VBox.margin></CheckBox>
+         </children>
+      </VBox>
+      <VBox layoutX="600.0" layoutY="444.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GAME%20IMAGES/COD.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </ImageView>
+            <CheckBox fx:id="cbCOD" mnemonicParsing="false" onAction="#handleCOD" text="Call of Duty" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="7.0" />
+               </VBox.margin></CheckBox>
+         </children>
+      </VBox>
+      <VBox layoutX="825.0" layoutY="444.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GAME%20IMAGES/FORZA.png" />
+               </image>
+            </ImageView>
+            <CheckBox fx:id="cbForza" mnemonicParsing="false" onAction="#handleForza" text="Forza" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="33.0" />
+               </VBox.margin></CheckBox>
+         </children>
+      </VBox>
+      <VBox layoutX="825.0" layoutY="243.0" prefHeight="191.0" prefWidth="150.0">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GAME%20IMAGES/SPORTS.PNG" />
+               </image>
+            </ImageView>
+            <CheckBox fx:id="cbFIIFA" mnemonicParsing="false" onAction="#handleFIFA" text="FIFA 22" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="25.0" />
+               </VBox.margin>
+            </CheckBox>
+         </children>
+      </VBox>
+      <VBox layoutX="600.0" layoutY="239.0" prefHeight="200.0" prefWidth="166.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GAME%20IMAGES/APEX.png" />
+               </image>
+            </ImageView>
+            <CheckBox fx:id="cbApexLegends" mnemonicParsing="false" onAction="#handleApex" text="Apex Legends" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font></CheckBox>
+         </children>
+      </VBox>
+      <VBox layoutX="1040.0" prefHeight="181.0" prefWidth="201.0">
+         <children>
+            <ImageView fitHeight="431.0" fitWidth="197.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GAME%20IMAGES/LOL.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="-35.0" />
+               </VBox.margin>
+            </ImageView>
+            <CheckBox fx:id="cbLOL" mnemonicParsing="false" onAction="#handleLOL" prefHeight="21.0" prefWidth="197.0" text="League Of Legends" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></CheckBox>
+         </children>
+      </VBox>
+      <VBox layoutX="830.0" layoutY="23.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ImageView fitHeight="133.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@GAME%20IMAGES/CSGO.png" />
+               </image>
+            </ImageView>
+            <CheckBox fx:id="cbCSGO" mnemonicParsing="false" onAction="#handleCSGO" text="CSGO" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="10.0" />
+               </padding></CheckBox>
+         </children>
+      </VBox>
+      <Text fill="WHITE" layoutX="26.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Games" underline="true">
+         <font>
+            <Font name="Berlin Sans FB" size="83.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.95" />
+         </effect>
+      </Text>
+      <Line endX="23.66650390625" endY="626.3333740234375" layoutX="540.0" layoutY="50.0" opacity="0.57" startX="23.66656494140625" startY="1.725480079650879" stroke="#b788e9" strokeWidth="5.0" AnchorPane.bottomAnchor="40.13109874725342" AnchorPane.topAnchor="48.18994617462158" />
+      <Text fill="WHITE" layoutX="29.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Select the Games That You Plan On Playing So That We Can Correctly Tailor The Parts For You" textAlignment="CENTER" wrappingWidth="493.0836181640625">
+         <font>
+            <Font name="Berlin Sans FB" size="26.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="29.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We Use Our Own Algorithm Based Off Of Your Price &amp; Game Selections to Generate Builds For You. From There, Customization Is Much Welcomed, But NEVER Needed!!" textAlignment="CENTER" wrappingWidth="493.0836181640625">
+         <font>
+            <Font name="Berlin Sans FB" size="26.0" />
+         </font>
+      </Text>
+      <Line endX="9.070823669433594" endY="307.6667175292969" layoutX="142.0" layoutY="136.0" opacity="0.6" startX="257.9644775390625" startY="306.6311950683594" stroke="WHITE" strokeWidth="5.0" AnchorPane.leftAnchor="147.5352897644043" AnchorPane.rightAnchor="876.5000038146973">
+         <effect>
+            <Bloom threshold="0.0" />
+         </effect>
+      </Line>
+   </children>
+</AnchorPane>

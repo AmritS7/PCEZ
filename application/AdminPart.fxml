@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminPartController">
+   <children>
+      <ImageView fitHeight="1401.0" fitWidth="2543.0" focusTraversable="true" layoutX="-134.0" layoutY="-113.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Background.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <TableView fx:id="tCPU" layoutX="40.0" layoutY="358.0" prefHeight="251.0" prefWidth="273.0">
+        <columns>
+          <TableColumn fx:id="CPUID" prefWidth="30.0" text="ID" />
+          <TableColumn fx:id="CPUName" prefWidth="150.0" text="Part Name" />
+            <TableColumn fx:id="CPUPrice" prefWidth="50.0" text="Price" />
+            <TableColumn fx:id="CPUCounter" prefWidth="40.0" text="Count" />
+        </columns>
+      </TableView>
+      <Button fx:id="changeToListStats" layoutX="265.0" layoutY="203.0" mnemonicParsing="false" onAction="#switchToLists" style="-fx-background-color: #187cab; -fx-border-width: 3; -fx-border-color: #419fb0;" text="List Info" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font></Button>
+      <TableView fx:id="tGPU" layoutX="336.0" layoutY="358.0" prefHeight="251.0" prefWidth="273.0">
+         <columns>
+            <TableColumn fx:id="GPUID" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="GPUName" prefWidth="150.0" text="Part Name" />
+            <TableColumn fx:id="GPUPrice" prefWidth="50.0" text="Price" />
+            <TableColumn fx:id="GPUCounter" prefWidth="40.0" text="Count" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tMOBO" layoutX="648.0" layoutY="117.0" prefHeight="153.0" prefWidth="273.0">
+         <columns>
+            <TableColumn fx:id="MOBOID" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="MOBOName" prefWidth="150.0" text="Part Name" />
+            <TableColumn fx:id="MOBOPrice" prefWidth="50.0" text="Price" />
+            <TableColumn fx:id="MOBOCounter" prefWidth="40.0" text="Count" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tRam" layoutX="962.0" layoutY="117.0" prefHeight="153.0" prefWidth="273.0">
+         <columns>
+            <TableColumn fx:id="RamID" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="RamName" prefWidth="150.0" text="Part Name" />
+            <TableColumn fx:id="RamPrice" prefWidth="50.0" text="Price" />
+            <TableColumn fx:id="RamCounter" prefWidth="40.0" text="Count" />
+         </columns>
+      </TableView>
+      <ButtonBar layoutX="21.0" layoutY="36.0" prefHeight="51.0" prefWidth="149.0" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="36.0">
+         <buttons>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0">
+               <buttons>
+                  <Button fx:id="bBack" maxHeight="53.0" maxWidth="72.0" minHeight="53.0" minWidth="72.0" mnemonicParsing="false" onAction="#back" prefHeight="53.0" prefWidth="72.0">
+                     <graphic>
+                        <ImageView blendMode="HARD_LIGHT" fitHeight="69.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </buttons>
+            </ButtonBar>
+            <Button fx:id="bHome" maxHeight="53.0" maxWidth="72.0" minHeight="53.0" minWidth="72.0" mnemonicParsing="false" onAction="#home" prefHeight="53.0" prefWidth="72.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView blendMode="HARD_LIGHT" fitHeight="53.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </buttons>
+      </ButtonBar>
+      <TableView fx:id="tCooler" layoutX="648.0" layoutY="329.0" prefHeight="153.0" prefWidth="273.0">
+         <columns>
+            <TableColumn fx:id="CoolerID" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="CoolerName" prefWidth="150.0" text="Part Name" />
+            <TableColumn fx:id="CoolerPrice" prefWidth="50.0" text="Price" />
+            <TableColumn fx:id="CoolerCounter" prefWidth="40.0" text="Count" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tStorage" layoutX="962.0" layoutY="532.0" prefHeight="153.0" prefWidth="273.0">
+         <columns>
+            <TableColumn fx:id="StorageID" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="StorageName" prefWidth="150.0" text="Part Name" />
+            <TableColumn fx:id="StoragePrice" prefWidth="50.0" text="Price" />
+            <TableColumn fx:id="StorageCounter" prefWidth="40.0" text="Count" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tPSU" layoutX="647.0" layoutY="532.0" prefHeight="153.0" prefWidth="273.0">
+         <columns>
+            <TableColumn fx:id="PSUID" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="PSUName" prefWidth="150.0" text="Part Name" />
+            <TableColumn fx:id="PSUPrice" prefWidth="50.0" text="Price" />
+            <TableColumn fx:id="PSUCounter" prefWidth="40.0" text="Count" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tCase" layoutX="962.0" layoutY="329.0" prefHeight="153.0" prefWidth="273.0">
+         <columns>
+            <TableColumn fx:id="CaseID" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="CaseName" prefWidth="150.0" text="Part Name" />
+            <TableColumn fx:id="CasePrice" prefWidth="50.0" text="Price" />
+            <TableColumn fx:id="CaseCounter" prefWidth="40.0" text="Count" />
+         </columns>
+      </TableView>
+      <Button layoutX="225.0" layoutY="41.0" mnemonicParsing="false" onAction="#logOut" style="-fx-background-color: #ff3d61; -fx-border-color: #420712;" text="Log Out" textFill="WHITE">
+         <effect>
+            <Bloom threshold="0.65" />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB" size="23.0" />
+         </font></Button>
+      <Text fill="WHITE" layoutX="134.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPUs">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="35.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="429.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GPUs">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="35.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="669.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Motherboards">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="35.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="1059.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RAM">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="35.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="723.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coolers">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="35.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="1053.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cases">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="35.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="658.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Power Supplies">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="35.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="1062.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SSDs">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="35.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

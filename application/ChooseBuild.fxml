@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720" prefWidth="1280" style="-fx-background-color: #fc3a3a;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ChooseBuildController">
+   <children>
+      <ImageView fitHeight="1401.0" fitWidth="2543.0" focusTraversable="true" layoutX="-154.0" layoutY="-133.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Background.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <HBox layoutX="341.0" layoutY="517.0" minHeight="-Infinity" prefHeight="74.0" prefWidth="195.0">
+         <children>
+            <VBox minWidth="-Infinity" prefHeight="91.0" prefWidth="43.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="12.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" width="103.0" />
+               </children>
+            </VBox>
+            <VBox maxWidth="-Infinity" prefHeight="59.0" prefWidth="151.0" spacing="2.0" />
+         </children>
+      </HBox>
+      <Label layoutX="331.0" layoutY="67.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text=" PC-EZ Builds" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="96.0" />
+         </font></Label>
+      <Button fx:id="bPBuild" layoutX="224.0" layoutY="591.0" mnemonicParsing="false" onAction="#changeToPListInfo" prefHeight="41.0" prefWidth="128.0" style="-fx-border-color: #419fb0; -fx-background-color: #32575e;" text="Select List" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="22.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.84" />
+         </effect></Button>
+      <ButtonBar layoutX="26.0" layoutY="31.0" prefHeight="51.0" prefWidth="149.0" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="31.0">
+         <buttons>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0">
+              <buttons>
+                <Button fx:id="bBack" blendMode="DIFFERENCE" maxHeight="53.0" maxWidth="72.0" minHeight="53.0" minWidth="72.0" mnemonicParsing="false" onAction="#back" prefHeight="53.0" prefWidth="72.0">
+                     <graphic>
+                        <ImageView blendMode="HARD_LIGHT" fitHeight="69.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+              </buttons>
+            </ButtonBar>
+            <Button fx:id="bHome" blendMode="DIFFERENCE" maxHeight="53.0" maxWidth="72.0" minHeight="53.0" minWidth="72.0" mnemonicParsing="false" onAction="#home" prefHeight="53.0" prefWidth="72.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView blendMode="HARD_LIGHT" fitHeight="53.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </buttons>
+      </ButtonBar>
+      <Button fx:id="bCBuild" layoutX="576.0" layoutY="591.0" mnemonicParsing="false" onAction="#changeToCListInfo" prefHeight="41.0" prefWidth="128.0" style="-fx-border-color: #419fb0; -fx-background-color: #32575e;" text="Select List" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="22.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.84" />
+         </effect></Button>
+      <Button fx:id="bNBuild" layoutX="923.0" layoutY="591.0" mnemonicParsing="false" onAction="#changeToNListInfo" style="-fx-border-color: #419fb0; -fx-background-color: #32575e;" text="Select List" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="22.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.84" />
+         </effect></Button>
+      <ImageView fitHeight="103.0" fitWidth="151.0" layoutX="225.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Miscellaneous%20Assets/GPU_Basic.png" />
+         </image></ImageView>
+      <Label fx:id="lPBCPU" layoutX="221.0" layoutY="311.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="195.0" text="CPU" textFill="WHITE" textOverrun="CLIP">
+         <padding>
+            <Insets top="3.5" />
+         </padding>
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="103.0" fitWidth="151.0" layoutX="230.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Miscellaneous%20Assets/CPU_Basic.png" />
+         </image></ImageView>
+      <Label fx:id="lPBGPU" layoutX="225.0" layoutY="485.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="195.0" text="GPU" textFill="WHITE" textOverrun="CLIP">
+         <padding>
+            <Insets top="3.5" />
+         </padding>
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lPBPrice" layoutX="281.0" layoutY="552.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="154.0" text="Price" textFill="WHITE" textOverrun="CLIP">
+         <padding>
+            <Insets top="2.0" />
+         </padding>
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="178.0" layoutY="316.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="19.0" prefWidth="41.0" text="CPU:" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="181.0" layoutY="491.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="GPU:" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="236.0" layoutY="556.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Price:" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="593.0" layoutY="558.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Price:" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lCBPrice" layoutX="633.0" layoutY="550.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="170.0" text="Price" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" top="6.0" />
+         </padding>
+      </Label>
+      <ImageView fitHeight="103.0" fitWidth="151.0" layoutX="578.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Miscellaneous%20Assets/GPU_Basic.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="103.0" fitWidth="151.0" layoutX="588.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Miscellaneous%20Assets/CPU_Basic.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="556.0" layoutY="487.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="GPU:" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lCBGPU" layoutX="596.0" layoutY="478.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="181.0" text="GPU" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" top="6.0" />
+         </padding>
+      </Label>
+      <Label fx:id="lCBCPU" layoutX="594.0" layoutY="300.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="181.0" text="CPU" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" top="6.0" />
+         </padding>
+      </Label>
+      <Label layoutX="557.0" layoutY="313.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="CPU:" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="lNBCPU" layoutX="926.0" layoutY="313.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="153.0" text="CPU" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="lNBGPU" layoutX="930.0" layoutY="484.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="154.0" text="GPU" textFill="WHITE">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lNBPrice" layoutX="980.0" layoutY="554.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="153.0" text="Price" textFill="WHITE">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="103.0" fitWidth="151.0" layoutX="918.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Miscellaneous%20Assets/CPU_Basic.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="890.0" layoutY="484.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="GPU:" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="887.0" layoutY="313.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="CPU:" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="939.0" layoutY="554.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Price:" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="19.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="103.0" fitWidth="151.0" layoutX="917.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Miscellaneous%20Assets/GPU_Basic.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

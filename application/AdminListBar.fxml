@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminListBarController">
+   <children>
+      <ImageView fitHeight="1401.0" fitWidth="2543.0" focusTraversable="true" layoutX="-144.0" layoutY="-123.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Background.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <BarChart fx:id="LSBar" barGap="0.0" layoutX="276.0" layoutY="48.0" prefHeight="589.0" prefWidth="728.0">
+        <xAxis>
+          <CategoryAxis label="List IDs" side="BOTTOM" tickLabelFill="WHITE" tickMarkVisible="false" fx:id="xLID">
+               <tickLabelFont>
+                  <Font name="Berlin Sans FB" size="17.0" />
+               </tickLabelFont></CategoryAxis>
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yClicks" label="Clicks" side="LEFT" tickLabelFill="WHITE">
+               <tickLabelFont>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </tickLabelFont></NumberAxis>
+        </yAxis>
+      </BarChart>
+      <Button fx:id="bSwitch" layoutX="595.0" layoutY="603.0" mnemonicParsing="false" onAction="#switchToPie" style="-fx-background-color: #187cab; -fx-border-width: 3; -fx-border-color: #419fb0;" text="Switch View" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.94" />
+         </effect></Button>
+      <ButtonBar layoutX="36.0" layoutY="21.0" prefHeight="51.0" prefWidth="149.0" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="21.0">
+         <buttons>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0">
+               <buttons>
+                  <Button fx:id="bBack" maxHeight="53.0" maxWidth="72.0" minHeight="53.0" minWidth="72.0" mnemonicParsing="false" onAction="#back" prefHeight="53.0" prefWidth="72.0">
+                     <graphic>
+                        <ImageView blendMode="HARD_LIGHT" fitHeight="69.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </buttons>
+            </ButtonBar>
+            <Button fx:id="bHome" maxHeight="53.0" maxWidth="72.0" minHeight="53.0" minWidth="72.0" mnemonicParsing="false" onAction="#home" prefHeight="53.0" prefWidth="72.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView blendMode="HARD_LIGHT" fitHeight="53.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </buttons>
+      </ButtonBar>
+      <Text fill="WHITE" layoutX="553.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Anyalytics">
+         <font>
+            <Font name="Berlin Sans FB" size="30.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

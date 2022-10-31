@@ -1,0 +1,29 @@
+
+.chart-title {
+  -fx-text-fill: #FFFFFF;
+}
+
+
+.chart-pie-label {
+
+    -fx-text-fill: #FFFFFF;
+} 
+
+.table-view .table-cell{
+    -fx-font-weight:bold;
+    -fx-font-size:15px;         
+    
+
+}
+.body{
+
+    -fx-text-fill: #FFFFFF;
+} 
+
+.label{
+
+    -fx-text-fill: #FFFFFF;
+      -fx-font-weight:bold;
+    -fx-font-size:15px;  
+
+} 
